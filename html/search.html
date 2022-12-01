@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - Interpark Ticket</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
+    <link rel="icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <div class="container search">
+        <div class="search_inner">
+            <!--common header include -->
+            <div class="common_header2">
+                <button class="btn_home" onclick="location.href='../index.html'">
+                    <i class="bi bi-house-door"></i>
+                </button>
+                <h2><img src="../img/main_logo.png" alt="logo" /></h2>
+                <div class="user" onclick="location.href='./mypage.html'">
+                    <span><i class="bi bi-person"></i></span>
+                </div>
+            </div>
+            <!--common header include -->
+            <div class="search_contents">
+                <div class="search_field">
+                    <span><i class="bi bi-search"></i></span>
+                    <input type="text" placeholder="티켓명,배우명,커플할인으로 찾아보세요">
+                </div>
+                <div class="search_recent">
+                    <div class="title">
+                        <h3>최근 본 상품</h3>
+                        <button class="btn_all_clear">전체삭제</button>
+                    </div>
+                    <div class="item_wrap">
+                        <div class="items">
+                            <div class="item">
+                                <span><img src="../img/recent1.gif" alt=""></span>
+                                <button class="btn_clear"><i class="bi bi-x"></i></button>                            
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class="item">
+                                <span><img src="../img/recent2.gif" alt=""></span>
+                                <button class="btn_clear"><i class="bi bi-x"></i></button>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search_increase">
+                    <div class="title">
+                        <h3>급상승 검색어</h3>
+                        <p>최근 1시간 동안 검색 횟수가 급상승했어요!</p>
+                    </div>
+                    <ul class="search_increase_list">
+                        <li>
+                            <p>1. 뮤지컬 &lt;드라큘라&gt;</p>
+                            <img src="../img/dracula.jpg" alt="">
+                        </li>
+                        <li>
+                            <p>2. 뮤지컬 &lt;이프덴&gt;</p>
+                            <img src="../img/ifthen.gif" alt="">
+                        </li>
+                        <li>
+                            <p>3. 콘서트 &lt;Conan Gray Live in Seoul&gt; </p>
+                            <img src="../img/conan.gif" alt="">
+                        </li>
+                        <li>
+                            <p>4. 연극 &lt;오펀스&gt;</p>
+                            <img src="../img/orphans.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>  
+                <div class="footer">
+                    <div class="footer_wrap">
+                        <div class="company_info">
+                            <a href="#">주식회사 인터파크 사업자 정보</a>
+                            <a href="#">고객센터</a>
+                            <bitton class="info_more"></button>
+                        </div>
+                        <div class="company_info_more">
+                            <p>대표이사&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;최휘영</p>                        
+                            <p>사업자등록번호&nbsp; &nbsp; &nbsp;824-81-02515</p>
+                            <p>통신판매업신고&nbsp; &nbsp; &nbsp;2022-서울강남-02179</p>
+                            <p>고객센터&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1544-1555</p>
+                            <p>이메일&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;helpdesk@interpark.com</p>
+                        </div>
+                        <div class="company_menu">
+                            <a href="#">이용약관</a>
+                            <a href="#">여행약관</a>
+                            <a href="#">개인정보처리방침</a>
+                            <a href="#">사업자정보확인</a>
+                            <a href="#">이용안내</a><br>
+                            <a href="#">분쟁해결기준</a>
+                        </div>
+                        <div class="copyright">Copyright (c) INTERPARK Corporation All Rights Reserved.</div>
+                    </div>
+                </div>                            
+            </div>            
+            <div class="container gnb">
+                <a href="../index.html"><i class="bi bi-house-door"></i><span>홈</span></a>
+                <a href="./category.html"><i class="bi bi-list"></i><span>카테고리</span></a                >
+                <a href="./search.html"><i class="bi bi-search"></i><span>검색</span></a>
+                <a href="./signin.html"><i class="bi bi-person"></i><span>마이</span></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

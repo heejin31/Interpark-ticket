@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpark Ticket</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="icon" href="./img/favicon.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="./js/main.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/cookie.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+          //서비스워커가 있을때(서비스워커 지원여부)
+          navigator.serviceWorker
+            .register("service-worker.js") //등록
+            .then(function (success) {
+              console.log("serviceWorker 설치에 성공했습니다!", success);
+            })
+            .catch(function (error) {
+              console.log("serviceWorker 설치에 실패했습니다", error);
+            });
+        }
+      </script>
+</head>
+<body>
+    <div id="container" class="front_main">
+        <div class="front_main_inner">
+            <div class="front_main_contents">
+                <div class="main_slider">
+                    <div><img src="./img/main_s1.gif" alt=""></div>
+                    <div><img src="./img/main_s2.jpg" alt=""></div>
+                    <div><img src="./img/main_s3.gif" alt=""></div>
+                    <div><img src="./img/main_s4.png" alt=""></div>
+                    <div><img src="./img/main_s5.jpg" alt=""></div>
+                    <div><img src="./img/main_s6.jpg" alt=""></div>
+                </div>
+                <div class="category_nav">
+                    <a href="#">
+                        <div class="icon_wrap">
+                            <img src="./img/icon1.png" alt="">
+                            <p>뮤지컬</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="icon_wrap">
+                            <img src="./img/icon2.png" alt="">
+                            <p>콘서트</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="icon_wrap">
+                            <img src="./img/icon3.png" alt="">
+                            <p>전시/행사</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="icon_wrap">
+                            <img src="./img/icon4.png" alt="">
+                            <p>연극</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="icon_wrap">
+                            <img src="./img/icon5.png" alt="">
+                            <p>클래식</p>
+                        </div>
+                    </a>
+                    
+                    <a href="#" onclick="location.href='./html/category.html'">
+                        <div class="icon_wrap">
+                            <img src="./img/main_icon6.png" alt="">
+                            <p>전체보기</p>
+                        </div>
+                    </a>
+                
+                    
+                </div>
+                <div class="banner1">
+                    <a href="#">
+                        <img src="./img/benefit.gif" alt="">
+                    </a>
+                </div>
+                <div class="today_pick">
+                    <h2>오늘의 공연<span>&gt;</span></h2>
+                    <div class="today_pick_items">
+                        <div class="today_pick_item">
+                            <div class="thum">
+                                <img src="./img/main1_1.gif" alt="">
+                            </div>
+                            <div class="sort" onclick="location.href='./html/sub_matilda.html'">뮤지컬<span>마틸다</span></div>
+                        </div>
+                        <div class="today_pick_item">
+                            <div class="thum">
+                                <img src="./img/main1_2.jpg" alt="">
+                            </div>
+                            <div class="sort">전시<span>하리보</span></div>
+                        </div>
+                        <div class="today_pick_item">
+                            <div class="thum">
+                                <img src="./img/main1_3.jpg" alt="">
+                            </div>
+                            <div class="sort">사진전<span>헬가</span></div>
+                        </div>
+                        <div class="today_pick_item">
+                            <div class="thum">
+                                <img src="./img/main1_4.jpg" alt="">
+                            </div>
+                            <div class="sort">콘서트<span>연말정산</span></div>
+                        </div>
+                        <div class="today_pick_item">
+                            <div class="thum">
+                                <img src="./img/main1_5.gif" alt="">
+                            </div>
+                            <div class="sort">연극<span>쉬어매드니스</span></div>
+                        </div>
+                        <div class="today_pick_item">
+                            <div class="thum">
+                                <img src="./img/main1_6.gif" alt="">
+                            </div>
+                            <div class="sort">콘서트<span>오귀스탱</span></div>
+                        </div>                        
+                        <div class="today_pick_item">
+                            <div class="thum">
+                                <img src="./img/main1_7.png" alt="">
+                            </div>
+                            <div class="sort">전시<span>미키마우스</span></div>
+                        </div>   
+                        <div class="today_pick_item">
+                            <div class="thum">
+                                <img src="./img/main1_8.gif" alt="">
+                            </div>
+                            <div class="sort">뮤지컬<span>캣츠</span></div>
+                        </div>                                      
+                    </div>
+                </div>
+                <div class="banner2">
+                    <div class="banner2_wrap">                       
+                        <img src="./img/banner2-1.gif" alt="">                        
+                    </div>
+                    <div class="banner2_wrap">                       
+                        <img src="./img/banner2-2.gif" alt="">                        
+                    </div>
+                    <div class="banner2_wrap">                       
+                        <img src="./img/banner2-3.gif" alt="">                        
+                    </div>
+                </div>
+                <div class="recommend">                    
+                    <h2>추천공연<span>&gt;</span></h2>
+                    <div class="recommend_items">
+                        <div class="recommend_item">
+                            <div class="goods_badge">
+                                <span class="badge best">best</span>
+                                <span class="badge pick">MD's Pick</span>
+                            </div>
+                            <div class="thum">
+                                <img src="./img/main_3-1.gif" alt="">
+                            </div>
+                            <div class="sort">코난그레이 내한공연</div>
+                        </div>
+                        <div class="recommend_item">
+                            <div class="goods_badge">
+                                <span class="badge new">NEW</span>
+                                <span class="badge pick">MD's Pick</span>
+                            </div>
+                            <div class="thum">
+                                <img src="./img/main_3-2.jpg" alt="">
+                            </div>
+                            <div class="sort">앙드레 브라질리에</div>
+                        </div>
+                        <div class="recommend_item">
+                            <div class="goods_badge">
+                                
+                                <span class="badge pick">MD's Pick</span>
+                            </div>
+                            <div class="thum">
+                                <img src="./img/main_3-3.gif" alt="">
+                            </div>
+                            <div class="sort">알로하!</div>
+                        </div>
+                        <div class="recommend_item">
+                            <div class="goods_badge">
+                                <span class="badge best">best</span>
+                                <span class="badge pick">MD's Pick</span>
+                            </div>
+                            <div class="thum">
+                                <img src="./img/main_3-4.gif" alt="">
+                            </div>
+                            <div class="sort">임윤찬 리사이틀</div>
+                        </div>
+                        <div class="recommend_item">
+                            <div class="goods_badge">
+                                <span class="badge best">best</span>
+                                <span class="badge pick">MD's Pick</span>
+                            </div>
+                            <div class="thum">
+                                <img src="./img/main_3-5.gif" alt="">
+                            </div>
+                            <div class="sort">오귀스탱 뒤메이</div>
+                        </div>
+                        <div class="recommend_item" >
+                            <div class="goods_badge">
+                                <span class="badge best">best</span>
+                                <span class="badge pick">MD's Pick</span>
+                            </div>
+                            <div class="thum">
+                                <img src="./img/main_3-6.gif" alt="">
+                            </div>
+                            <div class="sort" onclick="location.href='./html/sub_nutcracker.html'">호두까기 인형</div>
+                        </div>                                                                       
+                    </div>
+                    <button class="btn_primary play_more">전체보기</button>      
+                </div>
+                <div class="ranking">
+                    <h2>랭킹<span>&gt;</span></h2>
+                    <div class="ranking_inner">
+                        <input type="radio" name="ranking_tabmenu" id="rankinh_tab1" checked>
+                        <input type="radio" name="ranking_tabmenu" id="rankinh_tab2">
+                        <input type="radio" name="ranking_tabmenu" id="rankinh_tab3"> 
+                        <div class="ranking_tab_btn">
+                            <label for="rankinh_tab1">뮤지컬</label>
+                            <label for="rankinh_tab2">콘서트</label>
+                            <label for="rankinh_tab3">전시/행사</label>
+                        </div>
+                        <div class="ranking_tabs">
+                            <div class="ranking_tab tab1">
+                                <div class="tab_item">
+                                    <div class="thum">
+                                        <img src="./img/ranking_1_1.gif" alt="">
+                                    </div>
+                                    <div class="desc">                                      
+                                        <h3>1<span> &lt;물랑루즈&gt; 아시아 초연</span></h3>
+                                        <p><i class="bi bi-geo-alt"></i> 블루스퀘어 신한카드홀</p>
+                                        <div class="date_wrap">
+                                            <p><i class="bi bi-calendar3"></i>2022.12.16-2023.03.05</p><span class="wish"></span>
+                                        </div>       
+                                    </div>                                    
+                                </div>
+                                <div class="tab_item">
+                                    <div class="thum">
+                                        <img src="./img/ranking_1_2.gif" alt="">
+                                    </div>
+                                    <div class="desc">                                      
+                                        <h3>2<span> 태양의 서커스&lt;뉴 알레그리아&gt;</span></h3>
+                                        <p><i class="bi bi-geo-alt"></i> 잠실종합운동장 내 빅탑</p>
+                                        <div class="date_wrap">
+                                            <p><i class="bi bi-calendar3"></i>2022.11.10-2023.01.15</p><span class="wish"></span>
+                                        </div>       
+                                    </div>                                    
+                                </div>
+                                <div class="tab_item">
+                                    <div class="thum">
+                                        <img src="./img/ranking_1_3.gif" alt="">
+                                    </div>
+                                    <div class="desc">                                      
+                                        <h3>3<span> 뮤지컬&lt;범옹&gt;</span></h3>
+                                        <p><i class="bi bi-geo-alt"></i> 드림아트센터</p>
+                                        <div class="date_wrap">
+                                            <p><i class="bi bi-calendar3"></i>2022.11.10-2023.01.15</p><span class="wish"></span>
+                                        </div>       
+                                    </div>                                    
+                                </div>
+                                <div class="tab_item">
+                                    <div class="thum">
+                                        <img src="./img/ranking_1_4.gif" alt="">
+                                    </div>
+                                    <div class="desc">                                      
+                                        <h3>4<span> &lt;지저스 크라이스트 수퍼스타&gt;</span></h3>
+                                        <p><i class="bi bi-geo-alt"></i> 광림아트센터 BBCH홀</p>
+                                        <div class="date_wrap">
+                                            <p><i class="bi bi-calendar3"></i>2022.11.10-2023.01.15</p><span class="wish"></span>
+                                        </div>       
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="ranking_tab tab2">
+                                <div class="tab_item">
+                                    <div class="thum">
+                                        <img src="./img/ranking_2_1.gif" alt="">
+                                    </div>
+                                    <div class="desc">                                      
+                                        <h3>1<span> &lt;2022-23 Forestella Concert&gt;</span></h3>
+                                        <p><i class="bi bi-geo-alt"></i> 장소엑스코 5층 컨벤션홀</p>
+                                        <div class="date_wrap">
+                                            <p><i class="bi bi-calendar3"></i>2022.11.10-2023.01.15</p><span class="wish"></span>
+                                        </div>       
+                                    </div>                                    
+                                </div>
+                                <div class="tab_item">
+                                    <div class="thum">
+                                        <img src="./img/ranking2_2.gif" alt="">
+                                    </div>
+                                    <div class="desc">                                      
+                                        <h3>2<span> 2023 WJSN FAN-CON<br>&lt;CODENAME : UJUNG&gt;</span></h3>
+                                        <p><i class="bi bi-geo-alt"></i> 블루스퀘어 마스터카드홀</p>
+                                        <div class="date_wrap">
+                                            <p><i class="bi bi-calendar3"></i>2022.11.10-2023.01.15</p><span class="wish"></span>
+                                        </div>       
+                                    </div>                                    
+                                </div>
+                                <div class="tab_item">
+                                    <div class="thum">
+                                        <img src="./img/ranking2_3.gif" alt="">
+                                    </div>
+                                    <div class="desc">                                      
+                                        <h3>3<span> BTOB&lt;Be Together&gt;</span></h3>
+                                        <p><i class="bi bi-geo-alt"></i> KSPO DOME</p>
+                                        <div class="date_wrap">
+                                            <p><i class="bi bi-calendar3"></i>2022.11.10-2023.01.15</p><span class="wish"></span>
+                                        </div>       
+                                    </div>                                    
+                                </div>
+                                <div class="tab_item">
+                                    <div class="thum">
+                                        <img src="./img/ranking2_4.gif" alt="">
+                                    </div>
+                                    <div class="desc">                                      
+                                        <h3>4<span> 브라이언 아담스 내한공연<br>&lt;Adams Live in Seoul&gt;</span></h3>
+                                        <p><i class="bi bi-geo-alt"></i> 올림픽공원 SK핸드볼경기장</p>
+                                        <div class="date_wrap">
+                                            <p><i class="bi bi-calendar3"></i>2022.11.10-2023.01.15</p><span class="wish"></span>
+                                        </div>       
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="ranking_tab tab3">
+                                <div class="tab_item">
+                                    <div class="thum">
+                                        <img src="./img/ranking3_1.gif" alt="">
+                                    </div>
+                                    <div class="desc">                                      
+                                        <h3>1<span> 장 줄리앙</span></h3>
+                                        <p><i class="bi bi-geo-alt"></i> 장소DDP 뮤지엄 지하2층 전시1관</p>
+                                        <div class="date_wrap">
+                                            <p><i class="bi bi-calendar3"></i>2022.11.10-2023.01.15</p><span class="wish"></span>
+                                        </div>       
+                                    </div>                                    
+                                </div>
+                                <div class="tab_item">
+                                    <div class="thum">
+                                        <img src="./img/ranking3_2.gif" alt="">
+                                    </div>
+                                    <div class="desc">                                      
+                                        <h3>2<span> &lt;얼리버드&gt;마틴 마르지엘라</span></h3>
+                                        <p><i class="bi bi-geo-alt"></i> 롯데뮤지엄</p>
+                                        <div class="date_wrap">
+                                            <p><i class="bi bi-calendar3"></i>2022.11.10-2023.01.15</p><span class="wish"></span>
+                                        </div>       
+                                    </div>                                    
+                                </div>
+                                <div class="tab_item">
+                                    <div class="thum">
+                                        <img src="./img/ranking3_3.gif" alt="">
+                                    </div>
+                                    <div class="desc">                                      
+                                        <h3>3<span> &lt;환기의 노래, 그림이 되다&gt;</span></h3>
+                                        <p><i class="bi bi-geo-alt"></i> S2A</p>
+                                        <div class="date_wrap">
+                                            <p><i class="bi bi-calendar3"></i>2022.11.10-2023.01.15</p><span class="wish"></span>
+                                        </div>       
+                                    </div>                                    
+                                </div>
+                                <div class="tab_item">
+                                    <div class="thum">
+                                        <img src="./img/ranking3_4.gif" alt="">
+                                    </div>
+                                    <div class="desc">                                      
+                                        <h3>4<span> &lt;일산&gt;AGF 2022</span></h3>
+                                        <p><i class="bi bi-geo-alt"></i> [일산] AGF 2022</p>
+                                        <div class="date_wrap">
+                                            <p><i class="bi bi-calendar3"></i>2022.11.10-2023.01.15</p><span class="wish"></span>
+                                        </div>       
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>                   
+                    </div>
+                </div>
+                <div class="play">
+                    <div class="play_inner">
+                        <div class="play_video">
+                            <img src="./img/main_5.gif" alt="">
+                            <button class="btn_play"><i class="bi bi-caret-right-fill"></i></button>
+                        </div>
+                        <div class="play_list_wrap">
+                            <div class="play_list">                                   
+                                <div class="desc">
+                                    <div class="desc_datail">                                    
+                                        <h3>콘서트</h3>
+                                        <div class="goods_badge">
+                                            <span class="badge best early">얼리버드</span>
+                                            <span class="badge pick new">NEW</span>
+                                        </div>
+                                    </div>  
+                                    <p>스텔라장 콘서트 &lt;WINTERSTELLA&gt;</p>                                        
+                                    <p>2022년 추운 겨울을 따뜻하게 녹여줄 콘서트</p>                                        
+                                </div>  
+                                <div class="thum">
+                                    <img src="./img/play1.gif" alt="">
+                                </div>                            
+                            </div>
+                            <div class="play_list">                                   
+                                <div class="desc">                                      
+                                    <div class="desc_datail">                                    
+                                        <h3>콘서트</h3>
+                                        <div class="goods_badge">                                            
+                                            <span class="badge pick new">NEW</span>
+                                        </div>
+                                    </div> 
+                                    <p>성시경 연말 콘서트</p>                                        
+                                    <p>계절과 하늘,사랑하는 사람들과 무탈한 하루</p>                                        
+                                </div>  
+                                <div class="thum">
+                                    <img src="./img/play2.gif" alt="">
+                                </div>                            
+                            </div>
+                            <div class="play_list">                                   
+                                <div class="desc rouge">                                      
+                                    <div class="desc_datail">                                    
+                                        <h3>뮤지컬</h3>
+                                        <div class="goods_badge">
+                                            
+                                            <span class="badge pick new">NEW</span>
+                                        </div>
+                                    </div> 
+                                    <p>뮤지컬 &lt;물랑루즈!&gt;아시아 초연</p>                                        
+                                    <p>브로드웨이 역사상 가장 호화로운 뮤지컬</p>                                        
+                                </div>  
+                                <div class="thum">
+                                    <img src="./img/play3.gif" alt="">
+                                </div>                            
+                            </div>
+                            <div class="play_list">                                   
+                                <div class="desc show daino">                                      
+                                    <div class="desc_datail">                                    
+                                        <h3>전시</h3>
+                                        <div class="goods_badge">
+                                            <span class="badge best early">얼리버드</span>
+                                            <span class="badge pick new">NEW</span>
+                                        </div>
+                                    </div> 
+                                    <p>&lt;제주 다이노스 어라이브&gt;</p>                                        
+                                    <p>살아 움직이는 초대형 공룡 체험전</p>                                        
+                                </div>  
+                                <div class="thum">
+                                    <img src="./img/play4.gif" alt="">
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="footer">
+                    <div class="footer_wrap">
+                        <div class="company_info">
+                            <a href="#">주식회사 인터파크 사업자 정보</a>
+                            <a href="#">고객센터</a>
+                            <bitton class="info_more"></button>
+                        </div>
+                        <div class="company_info_more">
+                            <p>대표이사&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;최휘영</p>                        
+                            <p>사업자등록번호&nbsp; &nbsp; &nbsp;824-81-02515</p>
+                            <p>통신판매업신고&nbsp; &nbsp; &nbsp;2022-서울강남-02179</p>
+                            <p>고객센터&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1544-1555</p>
+                            <p>이메일&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;helpdesk@interpark.com</p>
+                        </div>
+                        <div class="company_menu">
+                            <a href="#">이용약관</a>
+                            <a href="#">여행약관</a>
+                            <a href="#">개인정보처리방침</a>
+                            <a href="#">사업자정보확인</a>
+                            <a href="#">이용안내</a><br>
+                            <a href="#">분쟁해결기준</a>
+                        </div>
+                        <div class="copyright">Copyright (c) INTERPARK Corporation All Rights Reserved.</div>
+                    </div>
+                </div>
+                <!-- 동영상 팝업-->
+                <div class="dark"></div>
+                <div class="container play_popup">
+                    <video controls autoplay muted playsinline loop>
+                        <source src="./img/main_5-1.mp4" type="video/mp4">    
+                    </video>    
+                    <button class="btn_close">
+                        <span class="play_popup_close"><i class="bi bi-x-lg"></i></span>
+                    </button>
+                </div> 
+                <!-- main 팝업 -->
+                <div class="dark2" id="floating-background"></div>
+                <div class="container main_popup" id="floating-notice">
+                    <div class="status">
+                        <label>
+                            <input type="checkbox" id="floating_banner"><em></em> 오늘 하루 보지 않기
+                        </label>
+                        <a href="#" id="close_banner" class="main_popup_close">닫기</a>
+                    </div>         
+                    <img src="img/호두까기.gif" alt="" onclick="location.href='html/sub_nutcracker.html'" > 
+                </div>
+                
+            </div>    
+            
+            <div class="container gnb">
+                <a href="./index.html"><i class="bi bi-house-door"></i><span>홈</span></a>
+                <a href="./html/category.html"><i class="bi bi-list"></i><span>카테고리</span></a>
+                <a href="./html/search.html"><i class="bi bi-search"></i><span>검색</span></a>
+                <a href="./html/signin.html"><i class="bi bi-person"></i><span>마이</span></a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

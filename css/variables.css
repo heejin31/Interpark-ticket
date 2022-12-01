@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/*font-icon CDN 항상맨위에(특히 눈누폰트위에)*/
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+:root{
+    /* font family*/
+    --notosans:'Noto Sans KR', sans-serif;
+    --roboto:font-family: 'Roboto', sans-serif;
+    --nexon2:'NEXON Lv2 Gothic';
+
+    /* Text Color  */
+    --dark-black:#333333;
+    --light-black:#555555;
+    --dark-gray:#777777;
+    --light-gray:#999999;
+    --gloudy-gray:#eeeeee;
+    --silver-gray:#dcdcdc;
+
+    /*  Object Color   */
+    --red:#CC191F;
+    --yellow:rgb(240, 202, 16);
+    --orange:#f9a459;
+    --dark-blue:#003A7C;
+    --light-green:#B1D6B4;
+    --back-black:#222222;
+    --back-gray:#E0DCDC;
+    --back-lightgray:#E9E8E8;
+    --fuchia:#f2b999;
+}
